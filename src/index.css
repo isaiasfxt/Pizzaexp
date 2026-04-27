@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", serif;
+  
+  --color-primary: #00A86B;
+  --color-accent: #00A86B;
+  --color-surface-dark: #111111;
+  --color-border-dark: #262626;
+}
+
+@layer base {
+  body {
+    -webkit-tap-highlight-color: transparent;
+    @apply bg-neutral-950 text-neutral-100;
+  }
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.sleek-gradient {
+  background: radial-gradient(circle at 50% 50%, #1a1a1a 0%, #050505 100%);
+}
+
+.sleek-card {
+  @apply bg-[#111] rounded-[40px] border border-neutral-800 shadow-2xl overflow-hidden;
+}
+
+.sleek-input {
+  @apply w-full bg-neutral-800 p-4 rounded-2xl border border-neutral-700 text-sm text-neutral-100 focus:border-[#00A86B] focus:ring-1 focus:ring-[#00A86B] outline-none transition-all;
+}
+
+.sleek-button-primary {
+  @apply bg-[#00A86B] text-white py-4 rounded-2xl font-bold uppercase tracking-wider text-sm shadow-[0_10px_20px_rgba(0,168,107,0.3)] hover:scale-[1.02] active:scale-[0.98] transition-all;
+}
+
+.active-nav-glow {
+  @apply text-[#00A86B] shadow-[0_0_15px_rgba(0,168,107,0.4)];
+}
+
